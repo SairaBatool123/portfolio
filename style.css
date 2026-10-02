@@ -1,0 +1,448 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: white;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #7c3cff;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #9b6cff;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    /*
+       Optional GIF background.
+
+       Apni GIF ka naam background.gif
+       rakh kar images folder mein rakhein.
+    */
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.85)
+        ),
+        url("images/background.gif");
+
+    background-size: cover;
+    background-position: center;
+
+    background-attachment: fixed;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.small-text {
+    color: #9b6cff;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #8b5cf6;
+}
+
+.description {
+    color: #cccccc;
+    font-size: 18px;
+
+    max-width: 600px;
+    margin: auto auto 30px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    background: #7c3cff;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 30px rgba(124, 60, 255, 0.5);
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 100px 20px;
+}
+
+.section-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    color: #aaa;
+
+    max-width: 600px;
+
+    margin-bottom: 50px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-box {
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    background: #111;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    border: 1px solid #252525;
+}
+
+.profile-circle {
+
+    min-width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 50px;
+
+    background: #1c102f;
+}
+
+.about-box h3 {
+    margin-bottom: 10px;
+}
+
+.about-box p {
+    color: #aaa;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   ASSIGNMENTS
+========================= */
+
+.assignments-section {
+    max-width: 1200px;
+}
+
+.assignment-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* CARD */
+
+.assignment-card {
+
+    position: relative;
+
+    background: #111;
+
+    border: 1px solid #252525;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    min-height: 330px;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+}
+
+
+/* Hover effect */
+
+.assignment-card:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    border-color: #7c3cff;
+
+    box-shadow:
+        0 15px 40px rgba(124, 60, 255, 0.2);
+}
+
+
+/* Number */
+
+.card-number {
+
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    color: #333;
+
+    font-size: 50px;
+
+    font-weight: bold;
+}
+
+
+/* Icon */
+
+.card-icon {
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+.assignment-card h3 {
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+.assignment-card p {
+
+    color: #999;
+
+    margin-bottom: 25px;
+}
+
+
+/* Button */
+
+.view-button {
+
+    display: inline-block;
+
+    color: #a78bfa;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.view-button:hover {
+
+    color: white;
+
+    transform: translateX(5px);
+
+}
+
+
+/* ADD CARD */
+
+.add-card {
+
+    border-style: dashed;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+
+    text-align: center;
+}
+
+.contact-section .hero-button {
+
+    margin-top: 25px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-top: 1px solid #222;
+
+    color: #777;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .assignment-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-links {
+
+        display: none;
+    }
+
+    .hero h1 {
+
+        font-size: 42px;
+    }
+
+    .section-title {
+
+        font-size: 32px;
+    }
+
+    .assignment-container {
+
+        grid-template-columns: 1fr;
+    }
+
+    .about-box {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
